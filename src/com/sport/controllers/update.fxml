@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane fx:controller="com.sport.controllers.UpdateController"
+            xmlns:fx="http://javafx.com/fmxl">
+
+    <headerText>
+        Uzupelnij dane zawodnika
+    </headerText>
+    <content>
+        <GridPane vgap="10" hgap="10">
+            <Label text="Imie" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="firstNameField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Label text="Nazwisko" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="lastNameField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Label text="Pozycja" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="positionField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <Label text="Wzrost" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="heightField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            <Label text="Waga" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <TextField fx:id="weightField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+            <Label text="Druzyna" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="teamField" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+            <Label text="Data urodzenia" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="dateOfBirthField" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+            <Label fx:id="message" GridPane.rowIndex="7" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+        </GridPane>
+    </content>
+
+</DialogPane>

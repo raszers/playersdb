@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainBorderPane"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.sport.controllers.mainViewController">
+<top>
+    <MenuBar>
+        <Menu text="Zawodnicy">
+            <items>
+                <MenuItem text="Dodaj nowego zawodnika" onAction="#openAddPlayerDialog"/>
+                <MenuItem text="Zaktualizuj dane zawodnika" onAction="#updatePlayer"/>
+                <MenuItem text="Usun zawodnika z DB" onAction="#deletePlayerRecord"/>
+                <MenuItem text="Pokaz wolnych agentow" onAction="#showUnassignedPlayers"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Exit"/>
+            </items>
+        </Menu>
+        <Menu text="Trenerzy">
+            <items>
+                <MenuItem text="Dodaj nowego trenera" onAction="#openAddCoachDialog"/>
+                <!--<MenuItem text="Usun trenera z DB"/>-->
+            </items>
+        </Menu>
+        <Menu text="Druzyna">
+            <items>
+                <MenuItem text="Zwolnij zawodnika" onAction="#removeFromTeam"/>
+                <MenuItem text="Zwolnij trenera" onAction="#removeCoachFromTeam"/>
+                <MenuItem text="Zatrudnij trenera" onAction="#assignCoach"/>
+            </items>
+        </Menu>
+    </MenuBar>
+</top>
+    <left>
+        <TableView fx:id="teamsTableView" onMouseClicked="#handleSelectTeam" prefWidth="160"/>
+    </left>
+    <center>
+        <TableView fx:id="personTableView" onMouseClicked="#viewPlayerDetails"/>
+    </center>
+
+    <right>
+        <TextArea fx:id="detailsArea"/>
+    </right>
+
+</BorderPane>
